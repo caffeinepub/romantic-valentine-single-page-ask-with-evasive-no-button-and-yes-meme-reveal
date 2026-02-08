@@ -1,0 +1,8 @@
+{
+  "frontend/src/index.css": "Global styles with romantic pink/white OKLCH color system for light and dark modes, custom Google Fonts (Playfair Display serif and Inter sans), and romantic theme variables.",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration with romantic pink/white color palette, custom font families (Playfair Display, Inter), romantic shadow effects, and custom animations (float, pulse-heart).",
+  "frontend/src/App.tsx": "Main app component managing a four-screen flow (cover, note, question, celebration) with state machine logic; includes the existing evasive No button behavior on the question screen and \"Good choice\" celebration with meme image.",
+  "frontend/src/components/TeddyDecor.tsx": "Reusable decorative component that renders multiple floating teddy bear sticker images from static assets with randomized positioning and animation.",
+  "frontend/src/components/NehaCoverScreen.tsx": "Initial cover screen displaying \"Neha\" title with teddy decorations, floating hearts, and a CTA button to open the note.",
+  "frontend/src/components/NehaNoteScreen.tsx": "Note screen displaying the romantic message text with the added \"Happy Propose Day\" message, a propose day illustration from static assets, teddy decorations, floating hearts, and a continue button to proceed to the Valentine question."
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add Propose Day message extension and illustration to Note screen",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Append the provided Propose Day message (with exact line breaks/punctuation) after the existing Note text without changing the existing content.",
+      "acceptanceCriteria": [
+        "On the Note screen, the existing note text remains unchanged and still appears.",
+        "The Note screen additionally displays the two new lines exactly:\n- \"Happy Propose Day\"\n- \"Life will be more beautiful if you are with me.\"",
+        "Line breaks are preserved (the two lines appear on separate lines)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/NehaNoteScreen.tsx",
+          "operation": "modify",
+          "description": "Update the note message string to append (after the existing text) a blank line and then the exact provided two-line Propose Day message. Preserve line breaks by keeping the existing whitespace handling (e.g., the current whitespace-pre-line behavior)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Add a static Propose Day themed illustration (boy kneeling proposing to girl) as a generated image asset and render it on the Note screen only, without any backend fetch.",
+      "acceptanceCriteria": [
+        "A new image file is added under frontend/public/assets/generated and is referenced directly from the Note screen via a /assets/generated/... path.",
+        "The illustration is visible on the Note screen alongside the note text (not on the cover, question, or celebration screens).",
+        "The frontend does not fetch the illustration from the backend; it is served as a static asset."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/propose-day-scene.dim_1024x768.png",
+          "operation": "create",
+          "description": "Add the generated static illustration asset matching the required scene and palette: \"Romantic illustration of a boy kneeling on one knee proposing to a girl while wishing her Happy Propose Day, soft pink/romantic palette\"."
+        },
+        {
+          "path": "frontend/src/components/NehaNoteScreen.tsx",
+          "operation": "modify",
+          "description": "Render the static illustration from frontend/public by adding an <img> referencing /assets/generated/propose-day-scene.dim_1024x768.png on the Note screen alongside the note text (and only on this screen). Ensure it is not loaded via any backend call."
+        }
+      ]
+    }
+  ]
+}

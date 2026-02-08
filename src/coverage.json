@@ -1,0 +1,51 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-08T05:19:18.956Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-11",
+        "summary": "Update the Note screen content to include the additional Propose Day message text exactly as provided, preserving line breaks and punctuation, appended after the existing note text:\n\n\"Happy Propose Day\nLife will be more beautiful if you are with me.\"",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/NehaNoteScreen.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/NehaNoteScreen.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Add a Propose Day themed illustration to the Note experience, matching this visual description: \"A boy is wishing a girl Happy Propose Day while proposing to her, kneeling down on one knee.\" Render it as a static frontend image asset on the Note screen (no backend fetch).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/propose-day-scene.dim_1024x768.png",
+          "frontend/src/components/NehaNoteScreen.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/propose-day-scene.dim_1024x768.png",
+          "frontend/src/components/NehaNoteScreen.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/propose-day-scene.dim_1024x768.png",
+    "frontend/src/components/NehaNoteScreen.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "kind": "build_request",
+  "title": "Add Propose Day note extension and proposing illustration on the Note screen",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "text": "Update the Note screen content to include the additional Propose Day message text exactly as provided, preserving line breaks and punctuation, appended after the existing note text:\n\n\"Happy Propose Day\nLife will be more beautiful if you are with me.\"",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "and again New Note:\n\nHappy Propose Day\nLife will be more beautiful if you are with me."
+        ]
+      },
+      "acceptanceCriteria": [
+        "On the Note screen, the existing note text remains unchanged and still appears.",
+        "The Note screen additionally displays the two new lines exactly:\n- \"Happy Propose Day\"\n- \"Life will be more beautiful if you are with me.\"",
+        "Line breaks are preserved (the two lines appear on separate lines)."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Add a Propose Day themed illustration to the Note experience, matching this visual description: \"A boy is wishing a girl Happy Propose Day while proposing to her, kneeling down on one knee.\" Render it as a static frontend image asset on the Note screen (no backend fetch).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Description (scene):\nA boy is wishing a girl Happy Propose Day while proposing to her, kneeling down on one knee."
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new image file is added under frontend/public/assets/generated and is referenced directly from the Note screen via a /assets/generated/... path.",
+        "The illustration is visible on the Note screen alongside the note text (not on the cover, question, or celebration screens).",
+        "The frontend does not fetch the illustration from the backend; it is served as a static asset."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/components/ui (Shadcn UI components are read-only).",
+    "Do not modify any paths listed in SYSTEM_CONTEXT.frontend.immutablePaths.",
+    "Backend remains single-actor in backend/main.mo; do not add additional backend services for this change.",
+    "Do not route images through the backend; render from static assets in frontend/public/assets/generated."
+  ],
+  "nonGoals": [
+    "Changing the existing screen flow (Cover -> Note -> Question -> Celebration).",
+    "Changing the existing Valentine question text, the evasive No behavior, or the celebration \"Good choice\" meme screen.",
+    "Adding authentication, persistence, or any backend data model changes."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Romantic illustration of a boy kneeling on one knee proposing to a girl while wishing her Happy Propose Day, soft pink/romantic palette (propose-day-scene.dim_1024x768.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

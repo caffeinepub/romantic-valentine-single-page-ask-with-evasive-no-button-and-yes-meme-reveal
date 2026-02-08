@@ -1,0 +1,17 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods.",
+  "feature_evidence.json": "Feature evidence describing updates to the Note screen message and adding a Propose Day illustration asset.",
+  "frontend-file-summaries.txt": "Prewritten summaries of key frontend files including styles, Tailwind config, and main components.",
+  "frontend/index.css": "Global Tailwind base styles defining OKLCH color variables for light and dark themes and applying background/foreground defaults.",
+  "frontend/index.html": "HTML entry point mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Top-level React component managing navigation flow between cover, note, question, and celebration screens with evasive No button logic.",
+  "frontend/src/components/NehaCoverScreen.tsx": "Cover screen with floating hearts, teddy decorations, and a CTA button to open the note.",
+  "frontend/src/components/NehaNoteScreen.tsx": "Note screen showing a romantic message, static Propose Day illustration, decorations, and a continue button.",
+  "frontend/src/components/TeddyDecor.tsx": "Utility component rendering randomly placed floating teddy sticker images.",
+  "frontend/src/hooks/useActor.ts": "Hook that creates and manages an authenticated or anonymous backend actor and refreshes queries on identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Hook and provider for managing Internet Identity login state, stored identities, and AuthClient setup.",
+  "frontend/src/index.css": "Configures Tailwind layers and defines extensive OKLCH-based light/dark theme CSS variables plus global base styles and imported fonts.",
+  "frontend/src/main.tsx": "Bootstraps the React app, wrapping it with React Query and Internet Identity providers and loading global styles.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme colors, fonts, radii, shadows, and animations using the custom OKLCH CSS variables and plugins.",
+  "project_state.json": "JSON file describing the project’s current requirements, features, design goals, and state metadata for the romantic interactive page."
+}

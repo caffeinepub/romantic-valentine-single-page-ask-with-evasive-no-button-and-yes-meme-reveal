@@ -1,0 +1,41 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-note-screen-content-to-include-the-additional-propose-day-message-text-exactly-as-provided-preserving-line-breaks-and-punctuation-appended-after-the-existing-note-text-happy-propose-day-life-will-be-more-beautiful-if-you-are-with-me",
+      "featureTitle": "Update the Note screen content to include the additional Propose Day message text exactly as provided, preserving line breaks and punctuation, appended after the existing note text:\n\n\"Happy Propose Day\nLife will be more beautiful if you are with me.\"",
+      "files": [
+        "frontend/src/components/NehaNoteScreen.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-propose-day-themed-illustration-to-the-note-experience-matching-this-visual-description-a-boy-is-wishing-a-girl-happy-propose-day-while-proposing-to-her-kneeling-down-on-one-knee-render-it-as-a-static-frontend-image-asset-on-the-note-screen-no-backend-fetch",
+      "featureTitle": "Add a Propose Day themed illustration to the Note experience, matching this visual description: \"A boy is wishing a girl Happy Propose Day while proposing to her, kneeling down on one knee.\" Render it as a static frontend image asset on the Note screen (no backend fetch).",
+      "files": [
+        "frontend/src/components/NehaNoteScreen.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

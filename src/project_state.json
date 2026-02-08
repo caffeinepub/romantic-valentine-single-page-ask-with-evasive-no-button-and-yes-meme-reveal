@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Interactive romantic Valentine single-page web page (HTML/CSS/JS) with Cover -> Neha note screen(s) with lots of small teddy visuals -> Yes/No prompt (evasive No on hover) -> meme image shown on Yes with text \"Good choice\".",
+  "architectural_notes": [
+    "Implement as a single-page static HTML file with embedded CSS/JS for easy local running.",
+    "Add a second screen/page in the single-page flow (e.g., show/hide sections) to display the personalized \"Neha\" note after the initial opening."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Romantic illustration of a boy kneeling on one knee proposing to a girl while wishing her Happy Propose Day, soft pink/romantic palette (propose-day-scene.dim_1024x768.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-purpose-interactive-valentine-page-that-asks-will-you-be-my-valentine-with-exactly-two-options-yes-and-no",
+      "title": "Create a single-purpose interactive Valentine page that asks: \"Will you be my Valentine?\" with exactly two options: \"Yes\" and \"No\".",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-evasive-behavior-for-the-no-button-when-the-user-hovers-over-it-pointer-mouse-the-button-moves-away-so-it-cannot-be-clicked",
+      "title": "Implement evasive behavior for the \"No\" button: when the user hovers over it (pointer/mouse), the button moves away so it cannot be clicked.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-when-the-user-clicks-yes-replace-the-prompt-experience-with-a-celebratory-meme-style-image-and-display-the-text-good-choice-exact-capitalization",
+      "title": "When the user clicks \"Yes\", replace the prompt experience with a celebratory meme-style image and display the text: \"Good choice\" (exact capitalization).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-romantic-visual-theme-using-a-pink-and-white-color-scheme-with-consistent-typography-and-layout",
+      "title": "Apply a cohesive romantic visual theme using a pink and white color scheme, with consistent typography and layout.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-provide-a-polished-creative-coherent-ui-theme-direction-colors-within-pink-white-palette-typography-pairing-spacing-and-a-simple-romantic-motif-such-as-hearts-and-apply-it-consistently-across-the-page",
+      "title": "Provide a polished, creative, coherent UI theme direction (colors within pink/white palette, typography pairing, spacing, and a simple romantic motif such as hearts) and apply it consistently across the page.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-generated-meme-image-as-a-static-frontend-asset-and-render-it-directly-from-the-frontend-do-not-fetch-it-from-the-backend-store-generated-images-under-frontend-public-assets-generated",
+      "title": "Add the generated meme image as a static frontend asset and render it directly from the frontend (do not fetch it from the backend). Store generated images under frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-initial-cover-screen-that-appears-before-the-existing-valentine-question-screen-showing-the-name-neha-prominently-and-a-clear-call-to-action-to-open-the-note",
+      "title": "Add a new initial 'cover' screen that appears before the existing Valentine question screen, showing the name \"Neha\" prominently and a clear call-to-action to open the note.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-second-screen-shown-after-opening-from-the-cover-that-displays-the-provided-note-text-exactly-english-with-a-romantic-layout-and-lots-of-small-teddies-decorative-motif-and-a-control-to-proceed-to-the-existing-valentine-question-experience",
+      "title": "Implement a second screen (shown after opening from the cover) that displays the provided note text exactly (English), with a romantic layout and 'lots of small teddies' decorative motif, and a control to proceed to the existing Valentine question experience.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-screen-flow-is-cover-neha-note-existing-valentine-question-yes-no-with-evasive-no-existing-good-choice-meme-screen-on-yes-the-yes-no-choice-must-only-appear-on-the-valentine-question-screen",
+      "title": "Ensure the screen flow is: Cover (\"Neha\") -> Note -> existing Valentine question (Yes/No with evasive No) -> existing \"Good choice\" meme screen (on Yes). The Yes/No choice must only appear on the Valentine question screen.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-and-render-teddy-themed-static-image-assets-from-the-frontend-do-not-fetch-from-backend-to-support-the-lots-of-small-teddies-decoration-on-the-cover-and-note-screens",
+      "title": "Add and render teddy-themed static image assets from the frontend (do not fetch from backend) to support the 'lots of small teddies' decoration on the cover and note screens.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-note-screen-content-to-include-the-additional-propose-day-message-text-exactly-as-provided-preserving-line-breaks-and-punctuation-appended-after-the-existing-note-text-happy-propose-day-life-will-be-more-beautiful-if-you-are-with-me",
+      "title": "Update the Note screen content to include the additional Propose Day message text exactly as provided, preserving line breaks and punctuation, appended after the existing note text:\n\n\"Happy Propose Day\nLife will be more beautiful if you are with me.\"",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-propose-day-themed-illustration-to-the-note-experience-matching-this-visual-description-a-boy-is-wishing-a-girl-happy-propose-day-while-proposing-to-her-kneeling-down-on-one-knee-render-it-as-a-static-frontend-image-asset-on-the-note-screen-no-backend-fetch",
+      "title": "Add a Propose Day themed illustration to the Note experience, matching this visual description: \"A boy is wishing a girl Happy Propose Day while proposing to her, kneeling down on one knee.\" Render it as a static frontend image asset on the Note screen (no backend fetch).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Build a self-contained romantic Valentine ask web page (HTML/CSS/JS) with pink/white theme, Yes/No choices, evasive No button on hover, and a meme image/message displayed after clicking Yes.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add a personalized note experience: include the name \"Neha\" (with lots of small teddies) and a second page/screen shown after opening that displays the provided Propose Day romantic note text.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add a Propose Day themed illustration/image asset (boy proposing on one knee, wishing Happy Propose Day) to accompany the Neha note content, rendered as a static frontend asset (no backend fetch).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Romantic Valentine single-page ask with evasive No button and Yes meme reveal",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
