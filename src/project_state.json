@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 7,
-  "summary": "Interactive romantic Valentine single-page web page (HTML/CSS/JS) with Cover -> Neha note screen(s) with lots of small teddy visuals -> Yes/No prompt (evasive No on hover) -> meme image shown on Yes with text \"Good choice\".",
+  "projectStateVersion": 17,
+  "summary": "Interactive romantic Chocolate Day single-page web page (HTML/CSS/JS) with Cover -> Sayli note screen(s) with lots of small teddy visuals -> Yes/No prompt (evasive No on hover) -> Chocolate Day proposal illustration shown on Yes with celebratory text, plus background song (\"Ma\") and a one-click download option for the complete page/assets.",
   "architectural_notes": [
     "Implement as a single-page static HTML file with embedded CSS/JS for easy local running.",
-    "Add a second screen/page in the single-page flow (e.g., show/hide sections) to display the personalized \"Neha\" note after the initial opening."
+    "Add a second screen/page in the single-page flow (e.g., show/hide sections) to display the personalized \"Neha\" note after the initial opening.",
+    "Add a one-click download mechanism (e.g., generate/serve a ZIP bundle) so the user can download the full self-contained page with all static assets together."
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Romantic illustration of a boy kneeling on one knee proposing to a girl while wishing her Happy Propose Day, soft pink/romantic palette (propose-day-scene.dim_1024x768.png)",
   "existing_features": [
     {
       "id": "feature-create-a-single-purpose-interactive-valentine-page-that-asks-will-you-be-my-valentine-with-exactly-two-options-yes-and-no",
@@ -105,6 +105,70 @@
         "REQ-12"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-a-cute-romantic-background-song-to-the-valentine-page-experience-as-a-static-frontend-asset-and-provide-simple-in-page-controls-to-play-pause-and-mute-unmute-the-music",
+      "title": "Add a cute romantic background song to the Valentine page experience as a static frontend asset, and provide simple in-page controls to play/pause and mute/unmute the music.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-one-click-download-option-that-lets-the-user-download-the-complete-valentine-surprise-page-and-all-required-static-assets-images-audio-and-compiled-frontend-files-as-a-single-zip-file-from-the-ui",
+      "title": "Add a one-click download option that lets the user download the complete Valentine surprise page and all required static assets (images, audio, and compiled frontend files) as a single ZIP file from the UI.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-requested-cute-english-background-song-ma-as-a-static-frontend-audio-asset-and-update-the-background-music-player-to-use-it-across-the-entire-valentine-experience-cover-note-question-and-celebration-screens",
+      "title": "Add the requested cute English background song \"Ma\" as a static frontend audio asset and update the background music player to use it across the entire Valentine experience (cover, note, question, and celebration screens).",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-cover-screen-to-display-the-name-sayli-prominently-replacing-the-current-name-shown-on-the-cover-while-keeping-the-existing-romantic-theme-and-teddy-decorations",
+      "title": "Update the Cover screen to display the name \"Sayli\" prominently (replacing the current name shown on the cover), while keeping the existing romantic theme and teddy decorations.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-note-screen-message-text-to-match-the-provided-chocolate-day-note-exactly-preserving-line-breaks-and-punctuation",
+      "title": "Update the Note screen message text to match the provided Chocolate Day note exactly, preserving line breaks and punctuation.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-note-screen-illustration-with-a-chocolate-day-themed-illustration-matching-the-provided-scene-description-and-render-it-as-a-static-frontend-asset-no-backend-fetch",
+      "title": "Replace the Note screen illustration with a Chocolate Day themed illustration matching the provided scene description, and render it as a static frontend asset (no backend fetch).",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-question-screen-user-facing-text-so-the-main-prompt-is-chocolate-day-themed-not-valentine-themed-and-asks-the-user-to-accept-the-chocolate-day-wish-the-question-screen-must-continue-to-show-exactly-two-options-yes-and-no",
+      "title": "Update the Question screen user-facing text so the main prompt is Chocolate Day themed (not Valentine themed) and asks the user to accept the Chocolate Day wish. The Question screen must continue to show exactly two options: “Yes” and “No”.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-celebration-screen-shown-after-clicking-yes-to-display-a-chocolate-day-themed-message-and-the-chocolate-day-illustration-boy-wishing-a-girl-happy-chocolate-day-while-proposing-on-one-knee-instead-of-the-current-valentine-good-choice-meme-content",
+      "title": "Update the Celebration screen shown after clicking “Yes” to display a Chocolate Day themed message and the Chocolate Day illustration (boy wishing a girl Happy Chocolate Day while proposing on one knee), instead of the current Valentine “Good choice” meme content.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -115,14 +179,32 @@
       "status": "pending"
     },
     {
-      "id": "AR-2",
-      "summary": "Add a personalized note experience: include the name \"Neha\" (with lots of small teddies) and a second page/screen shown after opening that displays the provided Propose Day romantic note text.",
+      "id": "AR-4",
+      "summary": "Add a cute romantic song/background music to the interactive Valentine page experience (playback control as appropriate).",
       "reqIds": [],
       "status": "pending"
     },
     {
-      "id": "AR-3",
-      "summary": "Add a Propose Day themed illustration/image asset (boy proposing on one knee, wishing Happy Propose Day) to accompany the Neha note content, rendered as a static frontend asset (no backend fetch).",
+      "id": "AR-5",
+      "summary": "Provide a one-click download option (e.g., downloadable ZIP) containing the complete self-contained Valentine page and all static assets (HTML/CSS/JS/images/music).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Replace the personalized note experience to use the name \"Sayli\" (with lots of small teddies) and update the second screen note text to the provided Chocolate Day message (preserve line breaks/punctuation).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Update the themed illustration asset to match Chocolate Day: \"A boy is wishing a girl Happy chocolate Day while proposing to her, kneeling down on one knee.\" Render as a static frontend image asset (no backend fetch).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Update the main prompt/copy to be Chocolate Day-focused (e.g., ask/confirm “Happy Chocolate Day, my dear cutie” with Yes/No), and show a Chocolate Day-themed message along with the illustration on “Yes”.",
       "reqIds": [],
       "status": "pending"
     }

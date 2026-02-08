@@ -1,42 +1,38 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add Propose Day message extension and illustration to Note screen",
+  "title": "Chocolate Day theme update for Question + Yes Celebration screens",
   "requirements": [
     {
-      "id": "REQ-11",
-      "summary": "Append the provided Propose Day message (with exact line breaks/punctuation) after the existing Note text without changing the existing content.",
+      "id": "REQ-19",
+      "summary": "Make the Question screen Chocolate Day themed while preserving the two-option Yes/No choice and existing flow (Cover → Note → Question).",
       "acceptanceCriteria": [
-        "On the Note screen, the existing note text remains unchanged and still appears.",
-        "The Note screen additionally displays the two new lines exactly:\n- \"Happy Propose Day\"\n- \"Life will be more beautiful if you are with me.\"",
-        "Line breaks are preserved (the two lines appear on separate lines)."
+        "On the Question screen, the headline no longer says “Will you be my Valentine?” and is replaced with Chocolate Day themed copy.",
+        "Only two buttons are shown on the Question screen, labeled exactly “Yes” and “No” (case-sensitive).",
+        "The Cover and Note screens remain unchanged in flow and still precede the Question screen."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/NehaNoteScreen.tsx",
+          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Update the note message string to append (after the existing text) a blank line and then the exact provided two-line Propose Day message. Preserve line breaks by keeping the existing whitespace handling (e.g., the current whitespace-pre-line behavior)."
+          "description": "Update the Question screen copy to be Chocolate Day themed (remove Valentine wording) and ensure the two action buttons are labeled exactly “Yes” and “No” (replace current “Yes! 💕” label). Keep the existing evasive No-button behavior, screen transitions, and continue to use the existing shadcn-ui Button component for the two options (verify the component's usage instructions before implementing)."
         }
       ]
     },
     {
-      "id": "REQ-12",
-      "summary": "Add a static Propose Day themed illustration (boy kneeling proposing to girl) as a generated image asset and render it on the Note screen only, without any backend fetch.",
+      "id": "REQ-20",
+      "summary": "Replace the Yes-click Celebration screen with Chocolate Day themed message and the Chocolate Day illustration from frontend static assets.",
       "acceptanceCriteria": [
-        "A new image file is added under frontend/public/assets/generated and is referenced directly from the Note screen via a /assets/generated/... path.",
-        "The illustration is visible on the Note screen alongside the note text (not on the cover, question, or celebration screens).",
-        "The frontend does not fetch the illustration from the backend; it is served as a static asset."
+        "Clicking “Yes” transitions to a Celebration screen that includes the text “Happy Chocolate Day, my dear cutie 🍫💖” (exact characters).",
+        "The Celebration screen includes the additional sentence “All the best—focus well and give your best paper.” (exact punctuation/dash).",
+        "The Celebration screen displays the existing Chocolate Day illustration from the frontend static assets (no backend fetch) and no longer displays /assets/generated/valentine-good-choice-meme.dim_1024x1024.png.",
+        "The “No” button behavior and all other screen transitions still work as before."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/propose-day-scene.dim_1024x768.png",
-          "operation": "create",
-          "description": "Add the generated static illustration asset matching the required scene and palette: \"Romantic illustration of a boy kneeling on one knee proposing to a girl while wishing her Happy Propose Day, soft pink/romantic palette\"."
-        },
-        {
-          "path": "frontend/src/components/NehaNoteScreen.tsx",
+          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Render the static illustration from frontend/public by adding an <img> referencing /assets/generated/propose-day-scene.dim_1024x768.png on the Note screen alongside the note text (and only on this screen). Ensure it is not loaded via any backend call."
+          "description": "Update the Celebration screen content rendered after clicking “Yes” to: (1) show the exact message line “Happy Chocolate Day, my dear cutie 🍫💖”, (2) show the exact sentence “All the best—focus well and give your best paper.”, and (3) swap the image to the existing static asset at frontend/public/assets/generated/chocolate-day-scene.dim_1024x768.png (and remove usage of /assets/generated/valentine-good-choice-meme.dim_1024x1024.png). Keep all existing transitions and the Question screen No-button behavior unchanged; continue using existing UI primitives such as shadcn-ui Button where applicable (verify the component's usage instructions before implementing)."
         }
       ]
     }

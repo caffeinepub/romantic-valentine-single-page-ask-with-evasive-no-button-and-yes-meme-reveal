@@ -37,7 +37,7 @@ export function NehaCoverScreen({ onOpenNote }: NehaCoverScreenProps) {
           </div>
           
           <h1 className="text-7xl md:text-9xl font-serif font-bold text-primary leading-tight tracking-wide">
-            Neha
+            Sayli
           </h1>
           
           <div className="flex justify-center gap-3">

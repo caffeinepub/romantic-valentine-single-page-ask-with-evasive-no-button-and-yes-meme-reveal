@@ -1,12 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Extend the Note screen with a Propose Day add-on message and a Propose Day themed proposing illustration.
+**Goal:** Make the Question prompt and the “Yes” Celebration screen Chocolate Day themed, including updated copy and using the existing Chocolate Day illustration.
 
 **Planned changes:**
-- Append the following Propose Day message to the existing Note screen text, preserving line breaks and punctuation exactly:
-  - "Happy Propose Day"
-  - "Life will be more beautiful if you are with me."
-- Add a new static illustration asset under `frontend/public/assets/generated` and display it on the Note screen via a `/assets/generated/...` path (no backend fetch).
+- Update the Question screen headline text to Chocolate Day themed copy asking the user to accept the Chocolate Day wish, while keeping exactly two buttons labeled “Yes” and “No”.
+- Update the Celebration screen (after clicking “Yes”) to show the Chocolate Day message text and display the existing Chocolate Day illustration from frontend static assets, replacing the current Valentine “Good choice” meme image.
 
-**User-visible outcome:** On the Note screen, users will see the original note text plus the added two-line Propose Day message, along with a romantic illustration of a boy kneeling and proposing to a girl while wishing her Happy Propose Day.
+**User-visible outcome:** The app’s flow remains the same (Cover → Note → Question), but the Question prompt and the “Yes” celebration now reflect Chocolate Day messaging and show the Chocolate Day illustration instead of the Valentine meme.

@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-note-screen-content-to-include-the-additional-propose-day-message-text-exactly-as-provided-preserving-line-breaks-and-punctuation-appended-after-the-existing-note-text-happy-propose-day-life-will-be-more-beautiful-if-you-are-with-me",
-      "featureTitle": "Update the Note screen content to include the additional Propose Day message text exactly as provided, preserving line breaks and punctuation, appended after the existing note text:\n\n\"Happy Propose Day\nLife will be more beautiful if you are with me.\"",
+      "featureId": "feature-update-the-question-screen-user-facing-text-so-the-main-prompt-is-chocolate-day-themed-not-valentine-themed-and-asks-the-user-to-accept-the-chocolate-day-wish-the-question-screen-must-continue-to-show-exactly-two-options-yes-and-no",
+      "featureTitle": "Update the Question screen user-facing text so the main prompt is Chocolate Day themed (not Valentine themed) and asks the user to accept the Chocolate Day wish. The Question screen must continue to show exactly two options: “Yes” and “No”.",
       "files": [
-        "frontend/src/components/NehaNoteScreen.tsx"
+        "frontend/src/App.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -15,15 +15,15 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-11"
+        "REQ-19"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-add-a-propose-day-themed-illustration-to-the-note-experience-matching-this-visual-description-a-boy-is-wishing-a-girl-happy-propose-day-while-proposing-to-her-kneeling-down-on-one-knee-render-it-as-a-static-frontend-image-asset-on-the-note-screen-no-backend-fetch",
-      "featureTitle": "Add a Propose Day themed illustration to the Note experience, matching this visual description: \"A boy is wishing a girl Happy Propose Day while proposing to her, kneeling down on one knee.\" Render it as a static frontend image asset on the Note screen (no backend fetch).",
+      "featureId": "feature-update-the-celebration-screen-shown-after-clicking-yes-to-display-a-chocolate-day-themed-message-and-the-chocolate-day-illustration-boy-wishing-a-girl-happy-chocolate-day-while-proposing-on-one-knee-instead-of-the-current-valentine-good-choice-meme-content",
+      "featureTitle": "Update the Celebration screen shown after clicking “Yes” to display a Chocolate Day themed message and the Chocolate Day illustration (boy wishing a girl Happy Chocolate Day while proposing on one knee), instead of the current Valentine “Good choice” meme content.",
       "files": [
-        "frontend/src/components/NehaNoteScreen.tsx"
+        "frontend/src/App.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -33,7 +33,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-12"
+        "REQ-20"
       ],
       "confidence": "high"
     }

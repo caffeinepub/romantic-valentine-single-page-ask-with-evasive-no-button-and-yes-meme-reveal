@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-08T05:19:18.956Z",
+  "generatedAt": "2026-02-08T08:15:04.833Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,27 +11,25 @@
     "implemented": 2,
     "items": [
       {
-        "id": "REQ-11",
-        "summary": "Update the Note screen content to include the additional Propose Day message text exactly as provided, preserving line breaks and punctuation, appended after the existing note text:\n\n\"Happy Propose Day\nLife will be more beautiful if you are with me.\"",
+        "id": "REQ-19",
+        "summary": "Update the Question screen user-facing text so the main prompt is Chocolate Day themed (not Valentine themed) and asks the user to accept the Chocolate Day wish. The Question screen must continue to show exactly two options: “Yes” and “No”.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/NehaNoteScreen.tsx"
+          "frontend/src/App.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/NehaNoteScreen.tsx"
+          "frontend/src/App.tsx"
         ]
       },
       {
-        "id": "REQ-12",
-        "summary": "Add a Propose Day themed illustration to the Note experience, matching this visual description: \"A boy is wishing a girl Happy Propose Day while proposing to her, kneeling down on one knee.\" Render it as a static frontend image asset on the Note screen (no backend fetch).",
+        "id": "REQ-20",
+        "summary": "Update the Celebration screen shown after clicking “Yes” to display a Chocolate Day themed message and the Chocolate Day illustration (boy wishing a girl Happy Chocolate Day while proposing on one knee), instead of the current Valentine “Good choice” meme content.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/generated/propose-day-scene.dim_1024x768.png",
-          "frontend/src/components/NehaNoteScreen.tsx"
+          "frontend/src/App.tsx"
         ],
         "matchedFiles": [
-          "frontend/public/assets/generated/propose-day-scene.dim_1024x768.png",
-          "frontend/src/components/NehaNoteScreen.tsx"
+          "frontend/src/App.tsx"
         ]
       }
     ]
@@ -41,8 +39,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/propose-day-scene.dim_1024x768.png",
-    "frontend/src/components/NehaNoteScreen.tsx",
+    "frontend/src/App.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

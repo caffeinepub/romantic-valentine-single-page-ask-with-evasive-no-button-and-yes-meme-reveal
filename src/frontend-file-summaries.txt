@@ -1,8 +1,12 @@
 {
   "frontend/src/index.css": "Global styles with romantic pink/white OKLCH color system for light and dark modes, custom Google Fonts (Playfair Display serif and Inter sans), and romantic theme variables.",
   "frontend/tailwind.config.js": "Extended Tailwind configuration with romantic pink/white color palette, custom font families (Playfair Display, Inter), romantic shadow effects, and custom animations (float, pulse-heart).",
-  "frontend/src/App.tsx": "Main app component managing a four-screen flow (cover, note, question, celebration) with state machine logic; includes the existing evasive No button behavior on the question screen and \"Good choice\" celebration with meme image.",
+  "frontend/src/App.tsx": "Main app component managing four-screen Chocolate Day flow (cover, note, question, celebration) with Chocolate Day themed question and celebration screens, evasive No button behavior, background music integration, and persistent controls across all screens.",
   "frontend/src/components/TeddyDecor.tsx": "Reusable decorative component that renders multiple floating teddy bear sticker images from static assets with randomized positioning and animation.",
-  "frontend/src/components/NehaCoverScreen.tsx": "Initial cover screen displaying \"Neha\" title with teddy decorations, floating hearts, and a CTA button to open the note.",
-  "frontend/src/components/NehaNoteScreen.tsx": "Note screen displaying the romantic message text with the added \"Happy Propose Day\" message, a propose day illustration from static assets, teddy decorations, floating hearts, and a continue button to proceed to the Valentine question."
+  "frontend/src/components/NehaCoverScreen.tsx": "Initial cover screen displaying \"Sayli\" title with teddy decorations, floating hearts, and a CTA button to open the note.",
+  "frontend/src/components/NehaNoteScreen.tsx": "Note screen displaying the Chocolate Day romantic message text, a chocolate day proposal illustration from static assets, teddy decorations, floating hearts, and a continue button to proceed to the Valentine question.",
+  "frontend/src/hooks/useBackgroundMusic.ts": "React context and hook for managing background music state (play/pause, mute/unmute) across the entire app.",
+  "frontend/src/components/BackgroundMusicProvider.tsx": "Provider component that creates and manages a single persistent HTMLAudioElement for the \"Ma\" background song with loop and volume controls, play/pause/mute functionality, and gesture-based start.",
+  "frontend/src/components/BackgroundMusicControls.tsx": "Fixed-position overlay component with play/pause and mute/unmute buttons using shadcn/ui Button components.",
+  "frontend/src/components/DownloadZipControl.tsx": "Fixed-position download button component that links to a static ZIP file containing the complete Valentine surprise page for one-click download."
 }

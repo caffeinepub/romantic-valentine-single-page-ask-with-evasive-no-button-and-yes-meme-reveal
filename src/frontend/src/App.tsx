@@ -3,14 +3,19 @@ import { Button } from '@/components/ui/button';
 import { Heart } from 'lucide-react';
 import { NehaCoverScreen } from '@/components/NehaCoverScreen';
 import { NehaNoteScreen } from '@/components/NehaNoteScreen';
+import { BackgroundMusicProvider } from '@/components/BackgroundMusicProvider';
+import { BackgroundMusicControls } from '@/components/BackgroundMusicControls';
+import { DownloadZipControl } from '@/components/DownloadZipControl';
+import { useBackgroundMusic } from '@/hooks/useBackgroundMusic';
 
 type Screen = 'cover' | 'note' | 'question' | 'celebration';
 
-function App() {
+function AppContent() {
     const [currentScreen, setCurrentScreen] = useState<Screen>('cover');
     const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
     const containerRef = useRef<HTMLDivElement>(null);
     const noButtonRef = useRef<HTMLButtonElement>(null);
+    const { startAfterGesture } = useBackgroundMusic();
 
     const moveNoButton = () => {
         if (!containerRef.current || !noButtonRef.current) return;
@@ -31,6 +36,15 @@ function App() {
         setNoButtonPosition({ x: newX, y: newY });
     };
 
+    const handleOpenNote = () => {
+        startAfterGesture();
+        setCurrentScreen('note');
+    };
+
+    const handleContinue = () => {
+        setCurrentScreen('question');
+    };
+
     const handleYesClick = () => {
         setCurrentScreen('celebration');
     };
@@ -48,12 +62,12 @@ function App() {
 
     // Cover screen
     if (currentScreen === 'cover') {
-        return <NehaCoverScreen onOpenNote={() => setCurrentScreen('note')} />;
+        return <NehaCoverScreen onOpenNote={handleOpenNote} />;
     }
 
     // Note screen
     if (currentScreen === 'note') {
-        return <NehaNoteScreen onContinue={() => setCurrentScreen('question')} />;
+        return <NehaNoteScreen onContinue={handleContinue} />;
     }
 
     // Celebration screen
@@ -81,17 +95,17 @@ function App() {
                 <main className="relative z-10 flex flex-col items-center justify-center max-w-2xl mx-auto text-center space-y-8">
                     <div className="space-y-4 animate-in fade-in duration-700">
                         <h1 className="text-5xl md:text-7xl font-serif font-bold text-primary animate-pulse-heart">
-                            Good choice
+                            Happy Chocolate Day, my dear cutie 🍫💖
                         </h1>
                         <p className="text-xl md:text-2xl text-foreground/80 font-sans">
-                            I knew you'd say yes! 💕
+                            All the best—focus well and give your best paper.
                         </p>
                     </div>
 
                     <div className="w-full max-w-md animate-in zoom-in duration-500 delay-300">
                         <img
-                            src="/assets/generated/valentine-good-choice-meme.dim_1024x1024.png"
-                            alt="Good choice meme"
+                            src="/assets/generated/chocolate-day-scene.dim_1024x768.png"
+                            alt="Chocolate Day celebration"
                             className="w-full h-auto rounded-2xl shadow-romantic border-4 border-primary/20"
                         />
                     </div>
@@ -145,7 +159,7 @@ function App() {
                         <Heart size={80} className="text-primary animate-pulse-heart" fill="currentColor" />
                     </div>
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-primary leading-tight">
-                        Will you be my Valentine?
+                        Happy Chocolate Day, my dear cutie 🍫💖
                     </h1>
                     <p className="text-xl md:text-2xl text-foreground/70 font-sans max-w-xl mx-auto">
                         There's only one right answer... 💖
@@ -163,7 +177,7 @@ function App() {
                         size="lg"
                         className="absolute px-12 py-6 text-2xl font-semibold rounded-full shadow-romantic hover:scale-110 transition-all duration-300 bg-primary hover:bg-primary/90 text-primary-foreground z-10"
                     >
-                        Yes! 💕
+                        Yes
                     </Button>
 
                     {/* No button - moves on hover */}
@@ -200,6 +214,16 @@ function App() {
                 </a>
             </footer>
         </div>
+    );
+}
+
+function App() {
+    return (
+        <BackgroundMusicProvider>
+            <BackgroundMusicControls />
+            <DownloadZipControl />
+            <AppContent />
+        </BackgroundMusicProvider>
     );
 }
 

@@ -1,60 +1,60 @@
 {
   "kind": "build_request",
-  "title": "Add Propose Day note extension and proposing illustration on the Note screen",
+  "title": "Make the main prompt and Yes-celebration Chocolate Day themed (copy + illustration)",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-11",
-      "text": "Update the Note screen content to include the additional Propose Day message text exactly as provided, preserving line breaks and punctuation, appended after the existing note text:\n\n\"Happy Propose Day\nLife will be more beautiful if you are with me.\"",
+      "id": "REQ-19",
+      "text": "Update the Question screen user-facing text so the main prompt is Chocolate Day themed (not Valentine themed) and asks the user to accept the Chocolate Day wish. The Question screen must continue to show exactly two options: “Yes” and “No”.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "and again New Note:\n\nHappy Propose Day\nLife will be more beautiful if you are with me."
+          "The page should be ... chocolate day ... to ask her to be Happy Chocolate Day, my dear cutie 🍫💖 ... There should be two options: Yes or No."
         ]
       },
       "acceptanceCriteria": [
-        "On the Note screen, the existing note text remains unchanged and still appears.",
-        "The Note screen additionally displays the two new lines exactly:\n- \"Happy Propose Day\"\n- \"Life will be more beautiful if you are with me.\"",
-        "Line breaks are preserved (the two lines appear on separate lines)."
+        "On the Question screen, the headline no longer says “Will you be my Valentine?” and is replaced with Chocolate Day themed copy.",
+        "Only two buttons are shown on the Question screen, labeled exactly “Yes” and “No” (case-sensitive).",
+        "The Cover and Note screens remain unchanged in flow and still precede the Question screen."
       ]
     },
     {
-      "id": "REQ-12",
-      "text": "Add a Propose Day themed illustration to the Note experience, matching this visual description: \"A boy is wishing a girl Happy Propose Day while proposing to her, kneeling down on one knee.\" Render it as a static frontend image asset on the Note screen (no backend fetch).",
+      "id": "REQ-20",
+      "text": "Update the Celebration screen shown after clicking “Yes” to display a Chocolate Day themed message and the Chocolate Day illustration (boy wishing a girl Happy Chocolate Day while proposing on one knee), instead of the current Valentine “Good choice” meme content.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "Description (scene):\nA boy is wishing a girl Happy Propose Day while proposing to her, kneeling down on one knee."
+          "When she clicks Yes, show her boy is sweetly wishing a girl Happy Chocolate Day.”",
+          "Happy Chocolate Day, my dear cutie 🍫💖 ... All the best—focus well and give your best paper.",
+          "Description (scene): A boy is wishing a girl Happy chocolate Day while proposing to her, kneeling down on one knee."
         ]
       },
       "acceptanceCriteria": [
-        "A new image file is added under frontend/public/assets/generated and is referenced directly from the Note screen via a /assets/generated/... path.",
-        "The illustration is visible on the Note screen alongside the note text (not on the cover, question, or celebration screens).",
-        "The frontend does not fetch the illustration from the backend; it is served as a static asset."
+        "Clicking “Yes” transitions to a Celebration screen that includes the text “Happy Chocolate Day, my dear cutie 🍫💖” (exact characters).",
+        "The Celebration screen includes the additional sentence “All the best—focus well and give your best paper.” (exact punctuation/dash).",
+        "The Celebration screen displays the existing Chocolate Day illustration from the frontend static assets (no backend fetch) and no longer displays /assets/generated/valentine-good-choice-meme.dim_1024x1024.png.",
+        "The “No” button behavior and all other screen transitions still work as before."
       ]
     }
   ],
   "constraints": [
-    "Do not modify files under frontend/src/components/ui (Shadcn UI components are read-only).",
-    "Do not modify any paths listed in SYSTEM_CONTEXT.frontend.immutablePaths.",
-    "Backend remains single-actor in backend/main.mo; do not add additional backend services for this change.",
-    "Do not route images through the backend; render from static assets in frontend/public/assets/generated."
+    "Do not modify any files under frontend/src/components/ui or other paths listed in frontend.immutablePaths.",
+    "Keep the app frontend-only for assets (images/audio must be served from frontend/public; do not fetch images/audio from the backend).",
+    "Backend (backend/main.mo) remains unchanged unless strictly required."
   ],
   "nonGoals": [
-    "Changing the existing screen flow (Cover -> Note -> Question -> Celebration).",
-    "Changing the existing Valentine question text, the evasive No behavior, or the celebration \"Good choice\" meme screen.",
-    "Adding authentication, persistence, or any backend data model changes."
+    "Changing the Cover screen name (it should remain “Sayli”).",
+    "Changing the Note screen text or illustration (it should remain the current Chocolate Day note and illustration).",
+    "Adding new authentication or any backend data persistence."
   ],
   "imageRequirements": {
-    "required": [
-      "Romantic illustration of a boy kneeling on one knee proposing to a girl while wishing her Happy Propose Day, soft pink/romantic palette (propose-day-scene.dim_1024x768.png)"
-    ],
+    "required": [],
     "edits": []
   },
   "userProfileUpdate": {

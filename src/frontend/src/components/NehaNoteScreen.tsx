@@ -42,19 +42,19 @@ export function NehaNoteScreen({ onContinue }: NehaNoteScreenProps) {
 When you are close to me, every moment feels special.
 
 What was hidden in my heart, I could never say till now.
-But today, on Propose Day, I just want to say—
+But today, on chocolate Day, I just want to say—
 Without you, this heart feels incomplete.
 
-Happy Propose Day
+Happy chocolate Day
 Life will be more beautiful if you are with me.`}
             </div>
           </div>
 
-          {/* Propose Day Illustration */}
+          {/* Chocolate Day Illustration */}
           <div className="flex justify-center animate-in fade-in zoom-in delay-200">
             <img 
-              src="/assets/generated/propose-day-scene.dim_1024x768.png" 
-              alt="Propose Day Scene"
+              src="/assets/generated/chocolate-day-scene.dim_1024x768.png" 
+              alt="Chocolate Day - Boy proposing to girl"
               className="rounded-2xl shadow-romantic border-2 border-primary/20 max-w-full h-auto w-full md:w-4/5"
             />
           </div>
